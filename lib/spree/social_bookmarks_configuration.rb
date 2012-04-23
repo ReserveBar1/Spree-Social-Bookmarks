@@ -30,7 +30,7 @@ module Spree
     preference :magnolia,    :boolean, :default => false
     preference :twitter,    :boolean, :default => true
     preference :email,      :boolean, :default => true
-    preference :tumblr,      :boolean, :default => true
+    preference :tumblr,      :boolean, :default => false
     preference :image_path, :string, :default => "/assets/store/social/"
   end
 end
