@@ -140,4 +140,10 @@
   	<img alt="Tumblr" src="<%=Spree::SocialBookmarks::Config[:image_path]%>tumblr.png" />
   </a>
   <%end-%>
+  <% if Spree::SocialBookmarks::Config[:pinterest]%>
+  <a title="Pin '<%= title %>' on Pinterest" href="http://pinterest.com/pin/create/button/?url=<%= url -%>&description=<%= title %>&media=<%= image_url -%>" target="_blank" rel="nofollow" class="pin-it-button" count-layout="horizontal">
+  	<img alt="Pinterest" src="<%=Spree::SocialBookmarks::Config[:image_path]%>pinterest.png" />
+  </a>
+  <%end-%>
+
 </div>

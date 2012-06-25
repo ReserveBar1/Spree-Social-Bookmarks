@@ -31,6 +31,7 @@ module Spree
     preference :twitter,    :boolean, :default => true
     preference :email,      :boolean, :default => true
     preference :tumblr,      :boolean, :default => false
+    preference :pinterest,      :boolean, :default => true
     preference :image_path, :string, :default => "/assets/store/social/"
   end
 end
