@@ -130,11 +130,15 @@
      <img alt="Twitter" src="<%=Spree::SocialBookmarks::Config[:image_path]%>twitter.png" />
   </a>
   <%end-%>
+<% begin %>
   <% if Rails::Engine.descendants.map(&:engine_name).include? "spree_email_to_friend" and Spree::SocialBookmarks::Config[:email]%>
   <a title="Email '<%= title %>' to a Friend" href="<%=email_to_friend_url('product', @product)%>" target="_blank" rel="nofollow">
      <img alt="ShoutWire" src="<%=Spree::SocialBookmarks::Config[:image_path]%>email.png" />
   </a>
   <%end-%>
+<% rescue
+  end
+%>
   <% if Spree::SocialBookmarks::Config[:tumblr]%>
   <a title="Add '<%= title %>' on Tumblr" href="http://www.tumblr.com/share" target="_blank" rel="nofollow">
   	<img alt="Tumblr" src="<%=Spree::SocialBookmarks::Config[:image_path]%>tumblr.png" />
