@@ -137,9 +137,11 @@
 	     <img alt="ShoutWire" src="<%=Spree::SocialBookmarks::Config[:image_path]%>email.png" />
 	  </a>
 	<% elsif @taxon %>
+	<!--
 	  <a title="Email '<%= title %>' to a Friend" href="<%=email_to_friend_url('taxon', @taxon)%>" target="_blank" rel="nofollow">
 	     <img alt="ShoutWire" src="<%=Spree::SocialBookmarks::Config[:image_path]%>email.png" />
 	  </a>	
+	-->
 	<% end %>
   <%end-%>
 <% rescue
